@@ -8,7 +8,7 @@ app.use(express.json())
 
 
 app.get('/api/mechs', mb.displayMechs)
-// app.post('/api/mechs', mb.saveMech)
+app.post('/api/mechs', mb.createMech)
 // app.put('/api/mechs/:id', mb.editMech)
 // app.delete('/api/mechs/:id', mb.deleteMech)
 

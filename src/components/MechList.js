@@ -27,6 +27,15 @@ class MechList extends Component {
     }
 
 
+    createMech = (frame, honorific, size, engine, weaponSystems) => {
+        axios.post('/api/mechs', {frame, honorific, size, engine, weaponSystems})
+        .then(res =>{
+            this.setState({
+                mechs: res.data
+            })
+        }).catch( err => console.log(err))
+    }
+
 
     render() {
         const mappedMechs = this.state.mechs.map( mech => {
@@ -37,6 +46,7 @@ class MechList extends Component {
         })
 
         return <div className='mechBay'>
+            <MechBay createMech={this.createMech}/>
             {mappedMechs}
         </div>
     }

@@ -11,6 +11,12 @@ header{
 .mechBay{
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.createMech{
+  display: flex;
+  flex-direction: column;
 }
 
 
