@@ -65,12 +65,12 @@ class MechBay extends Component {
                 placeholder='Enter chassis'
                 type='text' />
                
-                <input
+                {/* <input
                 name='honorific'
                 onChange={e => this.handleChange(e)}
                 value={this.state.honorific}
                 placeholder='Enter name'
-                type='text' />
+                type='text' /> */}
               
                 <input
                 name='size'

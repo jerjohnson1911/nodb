@@ -8,7 +8,8 @@ class MechList extends Component {
         super()
 
         this.state = {
-            mechs: []
+            mechs: [],
+            input: ''
         }
 
     }
@@ -37,6 +38,24 @@ class MechList extends Component {
         }).catch( err => console.log(err))
     }
 
+    venerate = id => {
+        axios.put(`/api/mechs/${id}`, {honorific: this.state.input})
+        .then(res => {
+            this.setState({
+                mechs: res.data
+            })
+        }).catch(err => console.log(err))
+    }
+
+    handleVenerate = (e) => {
+        console.log(e.target.value)
+        this.setState({
+            input: e.target.value
+        })
+    }
+
+
+
     reclamator = id => {
         axios.delete(`/api/mechs/${id}`)
         .then( res => {
@@ -52,6 +71,8 @@ class MechList extends Component {
             key={mech.id}
             mech={mech} 
             reclamator={this.reclamator}
+            venerate={this.venerate}
+            handleVenerate={this.handleVenerate}
             />
 
         })

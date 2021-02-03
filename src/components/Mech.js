@@ -13,6 +13,17 @@ const Mech = props => {
         <div>Right Arm: {props.mech.weaponSystems.rightArm}</div>
         {/* <div>Right Arm b: {props.mech.weaponSystems.rightArm[1]}</div> */}
         
+        
+            <input type='text'
+            name='venerate'
+            placeholder='Bestow honors.'
+            onChange={e => props.handleVenerate(e)}
+            // onchange={e => props.nameChange(e)}
+            />
+
+            <button onClick={() => props.venerate(props.mech.id)}>Venerate</button>
+        
+
          <button onClick={() => props.reclamator(props.mech.id)}>Send for reclamation.</button>
     </div>
 }

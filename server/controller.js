@@ -46,11 +46,13 @@ console.log(req.body)
 
     },
 
-    // editMech: (req, res) => {
-    //     const index = mechList.findIndex( mech => mech.id === +req.params.id)
-
-    //     res.status(200).send(mechs)
-    // },
+    venerate: (req, res) => {
+        const {honorific} = req.body
+        
+        const index = mechs.findIndex( mech => mech.id === +req.params.id)
+        mechs[index].honorific = honorific
+        res.status(200).send(mechs)
+    },
 
     reclamator: (req, res) => {
         const index = mechs.findIndex( mech => mech.id === +req.params.id)
