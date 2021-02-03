@@ -21,7 +21,7 @@ const mechs = [
         weaponSystems: {
             leftArm: ['med pulse las'],
             rightArm: ['med pulse las'],
-            torso: ['AC 120', 'SRM 6']
+            torso: ['AC 20', 'SRM 6']
         }
         
     }
@@ -38,11 +38,12 @@ module.exports = {
         // need to deconstruct something here
         const {frame, honorific, size, engine, weaponSystems} = req.body
         //not sure this will work
-
+console.log(req.body)
         const newMech = {id, frame, honorific, size, engine, weaponSystems}
         mechs.push(newMech)
         id++
         res.status(200).send(mechs)
+
     },
 
     // editMech: (req, res) => {

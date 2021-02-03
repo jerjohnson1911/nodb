@@ -23,6 +23,7 @@ class MechList extends Component {
             this.setState({
                 mechs: res.data
             })
+            console.log(res.data)
         }).catch(err => console.log(err))
     }
 

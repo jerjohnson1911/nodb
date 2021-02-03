@@ -25,11 +25,11 @@ class MechBay extends Component {
         })
     }
 
-    // handleChange = (e) => {
-    //     this.setState.weaponSystems({
-    //         [e.target.name]: e.target.value
-    //     })
-    // }
+    weaponChange = (e) => {
+        this.setState({
+            weaponSystems: {...this.state.weaponSystems, [e.target.name]: e.target.value}
+        })
+    }
 
     handleSubmit = e => {
         e.preventDefault()
@@ -38,9 +38,8 @@ class MechBay extends Component {
             this.state.honorific, 
             this.state.size,
             this.state.engine,
-            this.state.weaponSystems.torso,
-            this.state.weaponSystems.leftArm, 
-            this.state.weaponSystems.rightArm
+            this.state.weaponSystems
+            
             )
         this.setState({
             frame: '',
@@ -89,21 +88,21 @@ class MechBay extends Component {
                
                 <input
                 name='torso'
-                onChange={e => this.handleChange(e)}
+                onChange={e => this.weaponChange(e)}
                 value={this.state.weaponSystems.torso}
                 placeholder='Enter torso weapons'
                 type='text' />
               
                 <input
                 name='leftArm'
-                onChange={e => this.handleChange(e)}
+                onChange={e => this.weaponChange(e)}
                 value={this.state.weaponSystems.leftArm}
                 placeholder='Enter  left arm weapons'
                 type='text' />
                
                 <input
                 name='rightArm'
-                onChange={e => this.handleChange(e)}
+                onChange={e => this.weaponChange(e)}
                 value={this.state.weaponSystems.rightArm}
                 placeholder='Enter right arm weapons'
                 type='text' />
