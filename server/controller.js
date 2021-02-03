@@ -52,9 +52,9 @@ console.log(req.body)
     //     res.status(200).send(mechs)
     // },
 
-    // deleteMech: (req, res) => {
-    //     const index = mechList.findIndex(  mech => mech.id === +req.params.id)
-    //     mechList.splice(index, 1)
-    //     res.status(200).send(mechs)
-    // }
+    reclamator: (req, res) => {
+        const index = mechs.findIndex( mech => mech.id === +req.params.id)
+        mechs.splice(index, 1)
+        res.status(200).send(mechs)
+    }
 }

@@ -23,7 +23,7 @@ class MechList extends Component {
             this.setState({
                 mechs: res.data
             })
-            console.log(res.data)
+            // console.log(res.data)
         }).catch(err => console.log(err))
     }
 
@@ -37,12 +37,22 @@ class MechList extends Component {
         }).catch( err => console.log(err))
     }
 
+    reclamator = id => {
+        axios.delete(`/api/mechs/${id}`)
+        .then( res => {
+            this.setState({
+                mechs: res.data
+            })
+        }).catch(err => console.log(err))
+    }
 
     render() {
         const mappedMechs = this.state.mechs.map( mech => {
             return <Mech
             key={mech.id}
-            mech={mech} />
+            mech={mech} 
+            reclamator={this.reclamator}
+            />
 
         })
 

@@ -13,7 +13,7 @@ const Mech = props => {
         <div>Right Arm: {props.mech.weaponSystems.rightArm}</div>
         {/* <div>Right Arm b: {props.mech.weaponSystems.rightArm[1]}</div> */}
         
-        
+         <button onClick={() => props.reclamator(props.mech.id)}>Send for reclamation.</button>
     </div>
 }
 
