@@ -6,9 +6,9 @@ const mechs = [
         size: '75',
         engine:  '375',
         weaponSystems: {
-                leftArm: ['large las', 'medium las'],
-                rightArm: ['large las', 'medium las'],
-                torso: ['LRM 20', 'LRM 20']
+                leftArm: ['large las'],
+                rightArm: ['large las'],
+                torso: ['2x LRM 20']
             }
         
     },
@@ -21,7 +21,7 @@ const mechs = [
         weaponSystems: {
             leftArm: ['med pulse las'],
             rightArm: ['med pulse las'],
-            torso: ['AC 20', 'SRM 6']
+            torso: ['AC 20 ', ' SRM 6']
         }
         
     }

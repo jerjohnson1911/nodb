@@ -77,9 +77,9 @@ class MechList extends Component {
 
         })
 
-        return <div className='mechBay'>
+        return <div >
             <MechBay createMech={this.createMech}/>
-            {mappedMechs}
+           <div className='mechBay'>{mappedMechs}</div> 
         </div>
     }
 }

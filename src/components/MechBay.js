@@ -106,6 +106,16 @@ class MechBay extends Component {
                 value={this.state.weaponSystems.rightArm}
                 placeholder='Enter right arm weapons'
                 type='text' />
+
+
+                {/* could not make work so quickly, need more time */}
+                <select name="rightArm" value={this.state.weaponSystems.rightArm}>
+                    <option value={this.state.weaponSystems.rightArm}>Choose Weapon</option>
+                    <option value={this.state.weaponSystems.rightArm}>UAC 5</option>
+                    <option value='UAC 10'>UAC 10</option>
+                    <option value={this.state.weaponSystems.rightArm}>UAC 20</option>
+                    <option value={this.state.weaponSystems.rightArm}>Gauss Rifle</option>
+                </select>
                 
                               
 
